@@ -10,11 +10,11 @@
 
     html,body{
         height: 100%;
-        
+         overflow: hidden; 
     }
     
     #universe{
-        /* overflow: hidden; */
+        
         background:radial-gradient(#555,#000);
     }
     @keyframes flicker{
@@ -64,14 +64,14 @@
         to{transform: rotate(360deg);}
     }
     #earthOrbit{
-        height: 600px;
-        width: 600px;
-        border:2px  solid red ;
+        height: 500px;
+        width: 500px;
+        /* border:2px  solid red ; */
         position: absolute;
         top:50%;
         left: 50%;
-        margin-top: -300px;
-        margin-left: -300px;
+        margin-top: -250px;
+        margin-left: -250px;
         border-radius: 100%;
         animation:spin 30s linear infinite ;
 
@@ -81,7 +81,28 @@
         top: 50%;
         margin-top: -40px;
         margin-left: -40px;
+        animation:spin 20s linear infinite ;
+
+    }
+    #moonOrbit{
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        /* border: red solid 2px; */
+        margin-top: -60px;
+        margin-left:-60px;
+        top: 50%;
         animation:spin 10s linear infinite ;
+
+    }
+    #moon{
+        position: absolute;
+        margin-top: -20px;
+        margin-left:-20px;
+        top: 50%;
+        border-radius: 100%;
+        animation:spin 20s linear infinite ;
+
 
     }
    
@@ -93,6 +114,9 @@
     <div id="sun"></div>
     <div id="earthOrbit">
         <img id="earth" src="img/earth.png" alt="here is earth" width="80px" height="80px">
+        <div id="moonOrbit">
+            <img id="moon" src="img/moon.png" alt="here is moon" width="40px" height="40px">
+        </div>
     </div>
 
 </body>
